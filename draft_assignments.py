@@ -39,21 +39,55 @@ def main():
 
     # Call the Classroom API
     monday = {
-        "title": "Wednesday:",
+        "title": "Monday:",
         "description": """Template for this """,
-        "materials": [{"link": {"url": "https://api.socrative.com/rc/PLV8sA"}}],
+        "materials": [{"link": {"url": "http://codehs.com/"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": "2020-11-09T14:00:23Z",
         "state": "DRAFT",
     }
 
-    coursework = (
+    course_work_monday = (
         service.courses()
         .courseWork()
         .create(courseId=Learning_APIs, body=monday)
         .execute()
     )
-    print("Assignment created with Title {%s}" % coursework.get("title"))
+    print("Assignement created with Title {%s}" % course_work_monday.get("title"))
+
+    wednesday = {
+        "title": "Wednesday:",
+        "description": """Template for this """,
+        "materials": [{"link": {"url": "http://codehs.com/"}}],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": "2020-11-09T14:00:23Z",
+        "state": "DRAFT",
+    }
+
+    course_work_wednesday = (
+        service.courses()
+        .courseWork()
+        .create(courseId=Learning_APIs, body=wednesday)
+        .execute()
+    )
+    print("Assignement created with Title {%s}" % course_work_wednesday.get("title"))
+
+    friday = {
+        "title": "Friday:",
+        "description": """Template for this """,
+        "materials": [{"link": {"url": "http://codehs.com/"}}],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": "2020-11-09T14:00:23Z",
+        "state": "DRAFT",
+    }
+
+    course_work_friday = (
+        service.courses()
+        .courseWork()
+        .create(courseId=Learning_APIs, body=friday)
+        .execute()
+    )
+    print("Assignement created with Title {%s}" % course_work_friday.get("title"))
 
 
 if __name__ == "__main__":

@@ -42,18 +42,33 @@ def main():
     tuesday = {
         "title": "Tuesday:",
         "description": """Template for this """,
-        "materials": [{"link": {"url": "https://api.socrative.com/rc/PLV8sA"}}],
+        "materials": [{"link": {"url": "http://codehs.com/"}}],
+        "scheduledTime": "2020-11-09T14:00:23Z",
+        "state": "DRAFT",
+    }
+    thursday = {
+        "title": "Thursday:",
+        "description": """Template for this """,
+        "materials": [{"link": {"url": "http://codehs.com/"}}],
         "scheduledTime": "2020-11-09T14:00:23Z",
         "state": "DRAFT",
     }
 
-    courseworkmaterial = (
+    course_work_material_tuesday = (
         service.courses()
         .courseWorkMaterials()
         .create(courseId=Learning_APIs, body=tuesday)
         .execute()
     )
-    print("Assignment created with Title {%s}" % courseworkmaterial.get("title"))
+    print("Material created with Title {%s}" % course_work_material_tuesday.get("title"))
+
+    course_work_material_thursday = (
+        service.courses()
+        .courseWorkMaterials()
+        .create(courseId=Learning_APIs, body=thursday)
+        .execute()
+    )
+    print("Material created with Title {%s}" % course_work_material_thursday.get("title"))
 
 
 if __name__ == "__main__":
