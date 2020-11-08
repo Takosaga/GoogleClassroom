@@ -22,8 +22,8 @@ def main():
     # created automatically when the authorization flow completes for the first
     # time.
     if os.path.exists("token_material.pickle"):
-        with open("token_material.pickle", "rb") as token:
-            creds = pickle.load(token)
+        with open("token_material.pickle", "rb") as token_material:
+            creds = pickle.load(token_material)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
@@ -32,8 +32,8 @@ def main():
             flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open("token.pickle", "wb") as token:
-            pickle.dump(creds, token)
+        with open("token_material.pickle", "wb") as token_material:
+            pickle.dump(creds, token_material)
 
     service = build("classroom", "v1", credentials=creds)
 
