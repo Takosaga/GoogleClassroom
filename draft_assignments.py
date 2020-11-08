@@ -13,7 +13,7 @@ Computer_Science_A_AP = 126645602070
 Computer_Science_Principles_AP = 126645602060
 
 # If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/classroom.coursework.students']
+SCOPES = ['https://www.googleapis.com/auth/classroom.courseworkmaterials']
 
 def main():
     creds = None
@@ -38,18 +38,34 @@ def main():
     service = build('classroom', 'v1', credentials=creds)
 
     # Call the Classroom API
-    coursework = {
-        'title': 'Socrative Test',
+    monday = {
+        'title': 'Monday:',
         'description': '''Template for this ''',
         'materials': [
             {'link': {'url': 'https://api.socrative.com/rc/PLV8sA'}}
         ],
         'workType': 'ASSIGNMENT',
-        'state': 'PUBLISHED',
+        "scheduledTime": "2020-11-09T14:00:23Z",
+        'state': 'DRAFT'
     }
-    coursework = service.courses().courseWork().create(
-        courseId=Learning_APIs, body=coursework).execute()
-    print('Assignment created with ID {%s}' % coursework.get('id'))
+
+    #coursework = service.courses().courseWork().create(
+    #    courseId=Learning_APIs, body=monday).execute()
+    #print('Assignment created with Title {%s}' % coursework.get('title'))
+
+    tuesday = {
+        'title': 'Tuesday:',
+        'description': '''Template for this ''',
+        'materials': [
+            {'link': {'url': 'https://api.socrative.com/rc/PLV8sA'}}
+        ],
+        "scheduledTime": "2020-11-09T14:00:23Z",
+        'state': 'DRAFT'
+    }
+
+    courseworkmaterial = service.courses().courseWorkMaterials().create(
+        courseId=Learning_APIs, body=tuesday).execute()
+    print('Assignment created with Title {%s}' % courseworkmaterial.get('title'))
 
 
 if __name__ == '__main__':
