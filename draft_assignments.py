@@ -22,7 +22,7 @@ def assignment(service, course, day, name):
     )
     print(
         "Assignement draft scheduled with Title {%s}" % course_work.get("title")
-        + " for the class of "
+        + " for "
         + name
     )
 
@@ -52,8 +52,14 @@ def main():
 
     date = "2020-11-16T14:00:23Z"
 
+
+
+    # Create drafts for CS Classes
+
+
+
     monday_cs = {
-        "title": "Monday:",
+        "title": "Monday: Habits/Codehs Quiz",
         "description": """Template for this """,
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -102,6 +108,55 @@ def main():
         "Computer Science Principles",
     )
     assignment(service, computer_science_a_ap, friday_cs, "Computer Science A")
+
+
+
+    # Create drafts for Pre-Cal Classes
+
+
+
+    first_assign_cal = {
+        "title": "Tuesday A/ Wednesday B: Assignment",
+        "description": """Will be up on Tuesday""",
+        "materials": [
+        {'link': {'url': 'https://www.desmos.com/scientific'}},
+        {'link': {'url': 'https://api.socrative.com/rc/PLV8sA'}}
+    ],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    assignment(service, preCal_a, first_assign_cal, "Pre-Cal A")
+    assignment(service, preCal_a, first_assign_cal, "Pre-Cal B")
+
+    second_assign_cal = {
+        "title": "Thursday A/ Friday B: Assignment",
+        "description": """Will be up Thursday""",
+        "materials": [
+        {'link': {'url': 'https://www.desmos.com/scientific'}},
+        {'link': {'url': 'https://api.socrative.com/rc/TJhXMW'}}
+    ],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    assignment(service, preCal_a, second_assign_cal, "Pre-Cal A")
+    assignment(service, preCal_a, second_assign_cal, "Pre-Cal B")
+
+    last_assign_cal = {
+        "title": "Monday B/ Friday A: Habits/Quiz",
+        "description": """Will be up Thursday""",
+        "materials": [
+        {'link': {'url': 'https://www.desmos.com/scientific'}},
+        {'link': {'url': 'https://api.socrative.com/rc/tkaACc'}}
+    ],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    assignment(service, preCal_a, last_assign_cal, "Pre-Cal A")
+    assignment(service, preCal_a, last_assign_cal, "Pre-Cal B")
+
 
 
 if __name__ == "__main__":

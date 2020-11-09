@@ -25,7 +25,7 @@ def material(service, course, day, name):
     )
     print(
         "Assignement draft scheduled with Title {%s}" % course_material.get("title")
-        + " for the class of "
+        + " for "
         + name
     )
 
@@ -54,6 +54,13 @@ def main():
     # Call the Classroom API
 
     date = "2020-11-16T14:00:23Z"
+
+
+
+    # Create drafts for CS Classes
+
+
+
 
     tuesday_cs = {
         "title": "Tuesday: CodeHS",
@@ -86,6 +93,34 @@ def main():
         "Computer Science Principles",
     )
     material(service, computer_science_a_ap, thursday_cs, "Computer Science A")
+
+
+
+    # Create drafts for Pre-Cal Classes
+
+
+
+    first_note_cal = {
+        "title": "Monday A/Tuesday B: Notes",
+        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "materials": [{"link": {"url": "https://www.desmos.com/scientific"}}],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    material(service, preCal_a, first_note_cal, "Pre-Cal A")
+    material(service, preCal_a, first_note_cal, "Pre-Cal B")
+
+    second_note_cal = {
+        "title": "Wednesday A/Thursday B: Notes",
+        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "materials": [{"link": {"url": "https://www.desmos.com/scientific"}}],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    material(service, preCal_a, second_note_cal, "Pre-Cal A")
+    material(service, preCal_a, second_note_cal, "Pre-Cal B")
 
 
 if __name__ == "__main__":
