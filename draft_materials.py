@@ -16,6 +16,18 @@ Computer_Science_Principles_AP = 126645602060
 SCOPES = ["https://www.googleapis.com/auth/classroom.courseworkmaterials"]
 
 
+def material(service, course, day, name):
+    course_material = (
+        service.courses()
+        .courseWorkMaterials()
+        .create(courseId=course, body=day)
+        .execute()
+    )
+    print("Assignement created with Title {%s}" % course_material.get("title") + " for the class of " + name)
+
+
+
+
 def main():
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
@@ -39,36 +51,27 @@ def main():
 
     # Call the Classroom API
 
+    date = "2020-11-09T14:00:23Z"
+
     tuesday = {
         "title": "Tuesday:",
         "description": """Template for this """,
         "materials": [{"link": {"url": "http://codehs.com/"}}],
-        "scheduledTime": "2020-11-09T14:00:23Z",
+        "scheduledTime": date,
         "state": "DRAFT",
     }
+
+    material(service, Learning_APIs, tuesday, "Learning APIs")
+
     thursday = {
         "title": "Thursday:",
         "description": """Template for this """,
         "materials": [{"link": {"url": "http://codehs.com/"}}],
-        "scheduledTime": "2020-11-09T14:00:23Z",
+        "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    course_work_material_tuesday = (
-        service.courses()
-        .courseWorkMaterials()
-        .create(courseId=Learning_APIs, body=tuesday)
-        .execute()
-    )
-    print("Material created with Title {%s}" % course_work_material_tuesday.get("title"))
-
-    course_work_material_thursday = (
-        service.courses()
-        .courseWorkMaterials()
-        .create(courseId=Learning_APIs, body=thursday)
-        .execute()
-    )
-    print("Material created with Title {%s}" % course_work_material_thursday.get("title"))
+    material(service, Learning_APIs, thursday, "Learning APIs")
 
 
 if __name__ == "__main__":
