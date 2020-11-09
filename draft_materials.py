@@ -23,9 +23,11 @@ def material(service, course, day, name):
         .create(courseId=course, body=day)
         .execute()
     )
-    print("Assignement created with Title {%s}" % course_material.get("title") + " for the class of " + name)
-
-
+    print(
+        "Assignement created with Title {%s}" % course_material.get("title")
+        + " for the class of "
+        + name
+    )
 
 
 def main():

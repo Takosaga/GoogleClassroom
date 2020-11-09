@@ -18,13 +18,13 @@ SCOPES = ["https://www.googleapis.com/auth/classroom.coursework.students"]
 
 def assignment(service, course, day, name):
     course_work = (
-        service.courses()
-        .courseWork()
-        .create(courseId=course, body=day)
-        .execute()
+        service.courses().courseWork().create(courseId=course, body=day).execute()
     )
-    print("Assignement created with Title {%s}" % course_work.get("title") + " for the class of " + name)
-
+    print(
+        "Assignement created with Title {%s}" % course_work.get("title")
+        + " for the class of "
+        + name
+    )
 
 
 def main():
