@@ -24,7 +24,7 @@ def material(service, course, day, name):
         .execute()
     )
     print(
-        "Assignement draft scheduled with Title {%s}" % course_material.get("title")
+        "Material draft scheduled with Title {%s}" % course_material.get("title")
         + " for "
         + name
     )
