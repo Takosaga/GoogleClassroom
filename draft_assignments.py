@@ -127,7 +127,7 @@ def main():
     }
 
     assignment(service, preCal_a, first_assign_cal, "Pre-Cal A")
-    assignment(service, preCal_a, first_assign_cal, "Pre-Cal B")
+    assignment(service, preCal_b, first_assign_cal, "Pre-Cal B")
 
     second_assign_cal = {
         "title": "Thursday A/ Friday B: Assignment",
@@ -141,7 +141,7 @@ def main():
     }
 
     assignment(service, preCal_a, second_assign_cal, "Pre-Cal A")
-    assignment(service, preCal_a, second_assign_cal, "Pre-Cal B")
+    assignment(service, preCal_b, second_assign_cal, "Pre-Cal B")
 
     last_assign_cal = {
         "title": "Monday B/ Friday A: Habits/Quiz",
@@ -155,7 +155,7 @@ def main():
     }
 
     assignment(service, preCal_a, last_assign_cal, "Pre-Cal A")
-    assignment(service, preCal_a, last_assign_cal, "Pre-Cal B")
+    assignment(service, preCal_b, last_assign_cal, "Pre-Cal B")
 
 
 

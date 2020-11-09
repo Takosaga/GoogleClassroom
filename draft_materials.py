@@ -109,7 +109,7 @@ def main():
     }
 
     material(service, preCal_a, first_note_cal, "Pre-Cal A")
-    material(service, preCal_a, first_note_cal, "Pre-Cal B")
+    material(service, preCal_b, first_note_cal, "Pre-Cal B")
 
     second_note_cal = {
         "title": "Wednesday A/Thursday B: Notes",
@@ -120,7 +120,7 @@ def main():
     }
 
     material(service, preCal_a, second_note_cal, "Pre-Cal A")
-    material(service, preCal_a, second_note_cal, "Pre-Cal B")
+    material(service, preCal_b, second_note_cal, "Pre-Cal B")
 
 
 if __name__ == "__main__":
