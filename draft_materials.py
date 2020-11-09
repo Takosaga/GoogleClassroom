@@ -55,12 +55,7 @@ def main():
 
     date = "2020-11-16T14:00:23Z"
 
-
-
     # Create drafts for CS Classes
-
-
-
 
     tuesday_cs = {
         "title": "Tuesday: CodeHS",
@@ -94,11 +89,7 @@ def main():
     )
     material(service, computer_science_a_ap, thursday_cs, "Computer Science A")
 
-
-
     # Create drafts for Pre-Cal Classes
-
-
 
     first_note_cal = {
         "title": "Monday A/Tuesday B: Notes",

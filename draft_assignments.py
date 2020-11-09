@@ -52,11 +52,7 @@ def main():
 
     date = "2020-11-16T14:00:23Z"
 
-
-
     # Create drafts for CS Classes
-
-
 
     monday_cs = {
         "title": "Monday: Habits/Codehs Quiz",
@@ -109,19 +105,16 @@ def main():
     )
     assignment(service, computer_science_a_ap, friday_cs, "Computer Science A")
 
-
-
     # Create drafts for Pre-Cal Classes
-
-
 
     first_assign_cal = {
         "title": "Tuesday A/ Wednesday B: Assignment",
         "description": """Will be up on Tuesday""",
         "materials": [
-        {'link': {'url': 'https://www.desmos.com/scientific'}},
-        {'link': {'url': 'https://api.socrative.com/rc/PLV8sA'}}
-    ],
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/PLV8sA"}},
+        ],
+        "workType": "ASSIGNMENT",
         "scheduledTime": date,
         "state": "DRAFT",
     }
@@ -133,9 +126,10 @@ def main():
         "title": "Thursday A/ Friday B: Assignment",
         "description": """Will be up Thursday""",
         "materials": [
-        {'link': {'url': 'https://www.desmos.com/scientific'}},
-        {'link': {'url': 'https://api.socrative.com/rc/TJhXMW'}}
-    ],
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/TJhXMW"}},
+        ],
+        "workType": "ASSIGNMENT",
         "scheduledTime": date,
         "state": "DRAFT",
     }
@@ -147,16 +141,16 @@ def main():
         "title": "Monday B/ Friday A: Habits/Quiz",
         "description": """Will be up Thursday""",
         "materials": [
-        {'link': {'url': 'https://www.desmos.com/scientific'}},
-        {'link': {'url': 'https://api.socrative.com/rc/tkaACc'}}
-    ],
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/tkaACc"}},
+        ],
+        "workType": "ASSIGNMENT",
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
     assignment(service, preCal_a, last_assign_cal, "Pre-Cal A")
     assignment(service, preCal_b, last_assign_cal, "Pre-Cal B")
-
 
 
 if __name__ == "__main__":
