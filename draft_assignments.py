@@ -5,12 +5,12 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-Learning_APIs = 221418877483
-PreCal_B = 213918693516
-PreCal_A = 213918693436
+learning_APIs = 221418877483
+preCal_b = 213918693516
+preCal_a = 213918693436
 
-Computer_Science_A_AP = 126645602070
-Computer_Science_Principles_AP = 126645602060
+computer_science_a_ap = 126645602070
+computer_science_principles_ap = 126645602060
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ["https://www.googleapis.com/auth/classroom.coursework.students"]
@@ -21,7 +21,7 @@ def assignment(service, course, day, name):
         service.courses().courseWork().create(courseId=course, body=day).execute()
     )
     print(
-        "Assignement created with Title {%s}" % course_work.get("title")
+        "Assignement draft scheduled with Title {%s}" % course_work.get("title")
         + " for the class of "
         + name
     )
@@ -50,40 +50,58 @@ def main():
 
     # Call the Classroom API
 
-    date = "2020-11-09T14:00:23Z"
+    date = "2020-11-16T14:00:23Z"
 
-    monday = {
+    monday_cs = {
         "title": "Monday:",
         "description": """Template for this """,
-        "materials": [{"link": {"url": "http://codehs.com/"}}],
+        "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    assignment(service, Learning_APIs, monday, "Learning APIs")
+    assignment(
+        service,
+        computer_science_principles_ap,
+        monday_cs,
+        "Computer Science Principles",
+    )
+    assignment(service, computer_science_a_ap, monday_cs, "Computer Science A")
 
-    wednesday = {
-        "title": "Wednesday:",
-        "description": """Template for this """,
-        "materials": [{"link": {"url": "http://codehs.com/"}}],
+    wednesday_cs = {
+        "title": "Wednesday: Finish CodeHS",
+        "description": """ Will be in google meets during class time if you need help. Finish codehs chapters reviewed on Tuesday""",
+        "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    assignment(service, Learning_APIs, wednesday, "Learning APIs")
+    assignment(
+        service,
+        computer_science_principles_ap,
+        wednesday_cs,
+        "Computer Science Principles",
+    )
+    assignment(service, computer_science_a_ap, wednesday_cs, "Computer Science A")
 
-    friday = {
-        "title": "Friday:",
-        "description": """Template for this """,
-        "materials": [{"link": {"url": "http://codehs.com/"}}],
+    friday_cs = {
+        "title": "Friday: Review Assignment",
+        "description": """Assignment will posted on Thursday. Share the program with CodeHS.""",
+        "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    assignment(service, Learning_APIs, friday, "Learning APIs")
+    assignment(
+        service,
+        computer_science_principles_ap,
+        friday_cs,
+        "Computer Science Principles",
+    )
+    assignment(service, computer_science_a_ap, friday_cs, "Computer Science A")
 
 
 if __name__ == "__main__":

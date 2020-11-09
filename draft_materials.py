@@ -5,12 +5,12 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-Learning_APIs = 221418877483
-PreCal_B = 213918693516
-PreCal_A = 213918693436
+learning_APIs = 221418877483
+preCal_b = 213918693516
+preCal_a = 213918693436
 
-Computer_Science_A_AP = 126645602070
-Computer_Science_Principles_AP = 126645602060
+computer_science_a_ap = 126645602070
+computer_science_principles_ap = 126645602060
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ["https://www.googleapis.com/auth/classroom.courseworkmaterials"]
@@ -24,7 +24,7 @@ def material(service, course, day, name):
         .execute()
     )
     print(
-        "Assignement created with Title {%s}" % course_material.get("title")
+        "Assignement draft scheduled with Title {%s}" % course_material.get("title")
         + " for the class of "
         + name
     )
@@ -53,27 +53,39 @@ def main():
 
     # Call the Classroom API
 
-    date = "2020-11-09T14:00:23Z"
+    date = "2020-11-16T14:00:23Z"
 
-    tuesday = {
-        "title": "Tuesday:",
-        "description": """Template for this """,
-        "materials": [{"link": {"url": "http://codehs.com/"}}],
+    tuesday_cs = {
+        "title": "Tuesday: CodeHS",
+        "description": """Watch the video below and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
+        "materials": [{"link": {"url": "https://codehs.com"}}],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    material(service, Learning_APIs, tuesday, "Learning APIs")
+    material(
+        service,
+        computer_science_principles_ap,
+        tuesday_cs,
+        "Computer Science Principles",
+    )
+    material(service, computer_science_a_ap, tuesday_cs, "Computer Science A")
 
-    thursday = {
-        "title": "Thursday:",
-        "description": """Template for this """,
-        "materials": [{"link": {"url": "http://codehs.com/"}}],
+    thursday_cs = {
+        "title": "Thursday: CodeHS Review",
+        "description": """Watch the video below and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
+        "materials": [{"link": {"url": "https://codehs.com"}}],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    material(service, Learning_APIs, thursday, "Learning APIs")
+    material(
+        service,
+        computer_science_principles_ap,
+        thursday_cs,
+        "Computer Science Principles",
+    )
+    material(service, computer_science_a_ap, thursday_cs, "Computer Science A")
 
 
 if __name__ == "__main__":
