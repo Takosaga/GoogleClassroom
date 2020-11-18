@@ -53,13 +53,13 @@ def main():
 
     # Call the Classroom API
 
-    date = "2020-11-16T14:00:23Z"
+    date = "2020-11-30T14:00:23Z"
 
     # Create drafts for CS Classes
 
     tuesday_cs = {
         "title": "Tuesday: CodeHS",
-        "description": """Watch the video below and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
+        "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [{"link": {"url": "https://codehs.com"}}],
         "scheduledTime": date,
         "state": "DRAFT",
@@ -75,7 +75,7 @@ def main():
 
     thursday_cs = {
         "title": "Thursday: CodeHS Review",
-        "description": """Watch the video below and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
+        "description": """Watch the video below for review and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [{"link": {"url": "https://codehs.com"}}],
         "scheduledTime": date,
         "state": "DRAFT",
@@ -91,27 +91,43 @@ def main():
 
     # Create drafts for Pre-Cal Classes
 
-    first_note_cal = {
-        "title": "Monday A/Tuesday B: Notes",
+    first_note_calA = {
+        "title": "Monday : Notes",
         "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
         "materials": [{"link": {"url": "https://www.desmos.com/scientific"}}],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    material(service, preCal_a, first_note_cal, "Pre-Cal A")
-    material(service, preCal_b, first_note_cal, "Pre-Cal B")
-
-    second_note_cal = {
-        "title": "Wednesday A/Thursday B: Notes",
+    first_note_calB = {
+        "title": "Tuesday : Notes",
         "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
         "materials": [{"link": {"url": "https://www.desmos.com/scientific"}}],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    material(service, preCal_a, second_note_cal, "Pre-Cal A")
-    material(service, preCal_b, second_note_cal, "Pre-Cal B")
+    material(service, preCal_a, first_note_calA, "Pre-Cal A")
+    material(service, preCal_b, first_note_calB, "Pre-Cal B")
+
+    second_note_calA = {
+        "title": "Wednesday : Notes",
+        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "materials": [{"link": {"url": "https://www.desmos.com/scientific"}}],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    second_note_calB = {
+        "title": "Thursday : Notes",
+        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "materials": [{"link": {"url": "https://www.desmos.com/scientific"}}],
+        "scheduledTime": date,
+        "state": "DRAFT",
+    }
+
+    material(service, preCal_a, second_note_calA, "Pre-Cal A")
+    material(service, preCal_b, second_note_calB, "Pre-Cal B")
 
 
 if __name__ == "__main__":

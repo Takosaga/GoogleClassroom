@@ -48,10 +48,25 @@ def main():
 
     service = build("classroom", "v1", credentials=creds)
 
+    # Setting times
+
+    date = "2020-11-30T14:00:23Z"
+
+    # This is the Sunday after for CST
+    due = {
+        "year": 2020,
+        "month": 12,
+        "day": 6
+    }
+
+    time = {
+        "hours": 5,
+        "minutes": 59,
+        "seconds": 59,
+        "nanos": 0
+    }
+
     # Call the Classroom API
-
-    date = "2020-11-16T14:00:23Z"
-
     # Create drafts for CS Classes
 
     monday_cs = {
@@ -60,6 +75,9 @@ def main():
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
         "state": "DRAFT",
     }
 
@@ -77,6 +95,9 @@ def main():
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
         "state": "DRAFT",
     }
 
@@ -94,6 +115,9 @@ def main():
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
         "state": "DRAFT",
     }
 
@@ -107,8 +131,23 @@ def main():
 
     # Create drafts for Pre-Cal Classes
 
-    first_assign_cal = {
-        "title": "Tuesday A/ Wednesday B: Assignment",
+    first_assign_calA = {
+        "title": "Tuesday : Assignment",
+        "description": """Will be up by Tuesday""",
+        "materials": [
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/PLV8sA"}},
+        ],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
+        "state": "DRAFT",
+    }
+
+    first_assign_calB = {
+        "title": "Wednesday : Assignment",
         "description": """Will be up on Tuesday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -116,14 +155,17 @@ def main():
         ],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
         "state": "DRAFT",
     }
 
-    assignment(service, preCal_a, first_assign_cal, "Pre-Cal A")
-    assignment(service, preCal_b, first_assign_cal, "Pre-Cal B")
+    assignment(service, preCal_a, first_assign_calA, "Pre-Cal A")
+    assignment(service, preCal_b, first_assign_calB, "Pre-Cal B")
 
-    second_assign_cal = {
-        "title": "Thursday A/ Friday B: Assignment",
+    second_assign_calA = {
+        "title": "Thursday : Assignment",
         "description": """Will be up Thursday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -131,14 +173,32 @@ def main():
         ],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
         "state": "DRAFT",
     }
 
-    assignment(service, preCal_a, second_assign_cal, "Pre-Cal A")
-    assignment(service, preCal_b, second_assign_cal, "Pre-Cal B")
+    second_assign_calB = {
+        "title": "Friday : Assignment",
+        "description": """Will be up Thursday""",
+        "materials": [
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/TJhXMW"}},
+        ],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
+        "state": "DRAFT",
+    }
 
-    last_assign_cal = {
-        "title": "Monday B/ Friday A: Habits/Quiz",
+    assignment(service, preCal_a, second_assign_calA, "Pre-Cal A")
+    assignment(service, preCal_b, second_assign_calB, "Pre-Cal B")
+
+    last_assign_calA = {
+        "title": "Friday : Habits/Quiz",
         "description": """Will be up Thursday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -146,11 +206,48 @@ def main():
         ],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
         "state": "DRAFT",
     }
 
-    assignment(service, preCal_a, last_assign_cal, "Pre-Cal A")
-    assignment(service, preCal_b, last_assign_cal, "Pre-Cal B")
+    last_assign_calB = {
+        "title": "Monday : Habits/Quiz",
+        "description": """Will be up Thursday""",
+        "materials": [
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/tkaACc"}},
+        ],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
+        "state": "DRAFT",
+    }
+
+    assignment(service, preCal_a, last_assign_calA, "Pre-Cal A")
+    assignment(service, preCal_b, last_assign_calB, "Pre-Cal B")
+
+    #Here for testing stuff
+
+    """ testing =  {
+        "title": "Monday B/ Friday A: Habits/Quiz",
+        "description": "Will be up Thursday",
+        "materials": [
+            {"link": {"url": "https://www.desmos.com/scientific"}},
+            {"link": {"url": "https://api.socrative.com/rc/tkaACc"}},
+        ],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": date,
+        "dueDate": due,
+        "dueTime": time,
+        "maxPoints": 100,
+        "state": "DRAFT",
+    }
+
+    assignment(service, learning_APIs, testing, "Learning APIs") """
 
 
 if __name__ == "__main__":
