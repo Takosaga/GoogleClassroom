@@ -50,13 +50,13 @@ def main():
 
     # Setting times
 
-    date = "2020-11-30T14:00:23Z"
+    date = "2020-12-14T14:00:23Z"
 
     # This is the Sunday after for CST
     due = {
         "year": 2020,
         "month": 12,
-        "day": 6
+        "day": 20
     }
 
     time = {
@@ -70,7 +70,7 @@ def main():
     # Create drafts for CS Classes
 
     monday_cs = {
-        "title": "Monday: Habits/Codehs Quiz",
+        "title": "Monday 12/14: Habits/Codehs Quiz",
         "description": """Template for this """,
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -90,7 +90,7 @@ def main():
     assignment(service, computer_science_a_ap, monday_cs, "Computer Science A")
 
     wednesday_cs = {
-        "title": "Wednesday: Finish CodeHS",
+        "title": "Wednesday 12/16: Finish CodeHS",
         "description": """ Will be in google meets during class time if you need help. Finish codehs chapters reviewed on Tuesday""",
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -110,7 +110,7 @@ def main():
     assignment(service, computer_science_a_ap, wednesday_cs, "Computer Science A")
 
     friday_cs = {
-        "title": "Friday: Review Assignment",
+        "title": "Friday 12/19: Review Assignment",
         "description": """Assignment will posted on Thursday. Share the program with CodeHS.""",
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -132,7 +132,7 @@ def main():
     # Create drafts for Pre-Cal Classes
 
     first_assign_calA = {
-        "title": "Tuesday : Assignment",
+        "title": "Tuesday 12/15: Assignment",
         "description": """Will be up by Tuesday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -147,7 +147,7 @@ def main():
     }
 
     first_assign_calB = {
-        "title": "Wednesday : Assignment",
+        "title": "Wednesday 12/16: Assignment",
         "description": """Will be up on Tuesday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -165,7 +165,7 @@ def main():
     assignment(service, preCal_b, first_assign_calB, "Pre-Cal B")
 
     second_assign_calA = {
-        "title": "Thursday : Assignment",
+        "title": "Thursday 12/17: Assignment",
         "description": """Will be up Thursday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -180,7 +180,7 @@ def main():
     }
 
     second_assign_calB = {
-        "title": "Friday : Assignment",
+        "title": "Friday 12/18: Assignment",
         "description": """Will be up Thursday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -198,7 +198,7 @@ def main():
     assignment(service, preCal_b, second_assign_calB, "Pre-Cal B")
 
     last_assign_calA = {
-        "title": "Friday : Habits/Quiz",
+        "title": "Friday 12/18: Habits/Quiz",
         "description": """Will be up Thursday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -213,7 +213,7 @@ def main():
     }
 
     last_assign_calB = {
-        "title": "Monday : Habits/Quiz",
+        "title": "Monday 12/14: Habits/Quiz",
         "description": """Will be up Thursday""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
