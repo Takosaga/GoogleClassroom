@@ -53,12 +53,12 @@ def main():
 
     # Call the Classroom API
 
-    date = "2020-12-14T14:00:23Z"
+    date = "2021-1-4T14:00:23Z"
 
     # Create drafts for CS Classes
 
     tuesday_cs = {
-        "title": "Tuesday 12/15: CodeHS",
+        "title": "Tuesday 1/5: CodeHS",
         "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [
             {"link": {"url": "https://codehs.com"}},
@@ -77,7 +77,7 @@ def main():
     material(service, computer_science_a_ap, tuesday_cs, "Computer Science A")
 
     thursday_cs = {
-        "title": "Thursday 12/17: CodeHS Review",
+        "title": "Thursday 1/7: CodeHS Review",
         "description": """Watch the video below for review and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [
             {"link": {"url": "https://codehs.com"}},
@@ -98,7 +98,7 @@ def main():
     # Create drafts for Pre-Cal Classes
 
     first_note_calA = {
-        "title": "Monday 12/14: Notes",
+        "title": "Monday 1/4: Notes",
         "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -109,7 +109,7 @@ def main():
     }
 
     first_note_calB = {
-        "title": "Tuesday 12/15: Notes",
+        "title": "Tuesday 1/5: Notes",
         "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -123,7 +123,7 @@ def main():
     material(service, preCal_b, first_note_calB, "Pre-Cal B")
 
     second_note_calA = {
-        "title": "Wednesday 12/16: Notes",
+        "title": "Wednesday 1/6: Notes",
         "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -134,7 +134,7 @@ def main():
     }
 
     second_note_calB = {
-        "title": "Thursday 12/17: Notes",
+        "title": "Thursday 1/7: Notes",
         "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
