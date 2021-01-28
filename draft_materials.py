@@ -6,8 +6,11 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 learning_APIs = 221418877483
+
 preCal_b = 213918693516
 preCal_a = 213918693436
+
+preCal = 258128831252
 
 computer_science_a_ap = 126645602070
 computer_science_principles_ap = 126645602060
@@ -53,16 +56,16 @@ def main():
 
     # Call the Classroom API
 
-    date = "2021-1-4T14:00:23Z"
+    date = "2021-2-1T14:00:23Z"
 
     # Create drafts for CS Classes
 
     tuesday_cs = {
-        "title": "Tuesday 1/5: CodeHS",
+        "title": "Tuesday 2/2: CodeHS",
         "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [
             {"link": {"url": "https://codehs.com"}},
-            {"link": {"url": "https://forms.gle/5JsyfTMrpAphMCwF7"}},
+            {"link": {"url": "https://forms.gle/1Virqn8oKvo6hkcW9"}},
         ],
         "scheduledTime": date,
         "state": "DRAFT",
@@ -77,11 +80,11 @@ def main():
     material(service, computer_science_a_ap, tuesday_cs, "Computer Science A")
 
     thursday_cs = {
-        "title": "Thursday 1/7: CodeHS Review",
+        "title": "Thursday 2/4: CodeHS Review",
         "description": """Watch the video below for review and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [
             {"link": {"url": "https://codehs.com"}},
-            {"link": {"url": "https://forms.gle/zMx2NmsJGYjiu5sh9"}},
+            {"link": {"url": "https://forms.gle/puTHfvsVFf9amMFB6"}},
         ],
         "scheduledTime": date,
         "state": "DRAFT",
@@ -95,50 +98,51 @@ def main():
     )
     material(service, computer_science_a_ap, thursday_cs, "Computer Science A")
 
+"""
     # Create drafts for Pre-Cal Classes
 
     first_note_calA = {
-        "title": "Monday 1/4: Notes",
-        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "title": "Monday 1/11: Notes",
+        "description": "",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
-            {"link": {"url": "https://forms.gle/8ioVmwDA7qJpT4Ra6"}}
+            {"link": {"url": "https://forms.gle/FL7DfRJb3PLBDSix6"}}
         ],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
     first_note_calB = {
-        "title": "Tuesday 1/5: Notes",
-        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "title": "Tuesday 1/19: Notes",
+        "description": "",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
-            {"link": {"url": "https://forms.gle/5JsyfTMrpAphMCwF7"}}
+            {"link": {"url": "https://forms.gle/G1sJfxJz28ViGM9c9"}}
         ],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
-    material(service, preCal_a, first_note_calA, "Pre-Cal A")
+    #material(service, preCal_a, first_note_calA, "Pre-Cal A")
     material(service, preCal_b, first_note_calB, "Pre-Cal B")
 
     second_note_calA = {
-        "title": "Wednesday 1/6: Notes",
-        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "title": "Wednesday 1/20: Notes",
+        "description": "",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
-            {"link": {"url": "https://forms.gle/4rsnGKpszQm4rhjU7"}}
+            {"link": {"url": "https://forms.gle/dYsA7sFbt1vRqG626"}}
         ],
         "scheduledTime": date,
         "state": "DRAFT",
     }
 
     second_note_calB = {
-        "title": "Thursday 1/7: Notes",
-        "description": """Watch the video below, follow notes and fill out form for your attendance for today or show up in google meets for live teaching""",
+        "title": "Thursday 1/21: Notes",
+        "description": "",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
-            {"link": {"url": "https://forms.gle/zMx2NmsJGYjiu5sh9"}}
+            {"link": {"url": "https://forms.gle/dYsA7sFbt1vRqG626"}}
         ],
         "scheduledTime": date,
         "state": "DRAFT",
@@ -146,7 +150,7 @@ def main():
 
     material(service, preCal_a, second_note_calA, "Pre-Cal A")
     material(service, preCal_b, second_note_calB, "Pre-Cal B")
-
+"""
 
 if __name__ == "__main__":
     main()
