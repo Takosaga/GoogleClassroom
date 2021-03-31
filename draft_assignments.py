@@ -53,13 +53,13 @@ def main():
 
     # Setting times
 
-    date = "2021-3-15T14:00:23Z"
+    date = "2021-4-3T13:00:23Z"
 
     # This is the Sunday after for CST
     due = {
         "year": 2021,
-        "month": 3,
-        "day": 21
+        "month": 4,
+        "day": 10
     }
 
     time = {
@@ -73,7 +73,7 @@ def main():
     # Create drafts for CS Classes
 
     monday_cs = {
-        "title": "Monday 3/15: Catch Up/Codehs Quiz",
+        "title": "Monday 4/5: Catch Up/Codehs Quiz",
         "description": "This day is to catch up/ quiz over last weeks material.",
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -90,10 +90,10 @@ def main():
         monday_cs,
         "Computer Science Principles",
     )
-    assignment(service, computer_science_a_ap, monday_cs, "Computer Science # A")
+    assignment(service, computer_science_a_ap, monday_cs, "Computer Science A")
 
     wednesday_cs = {
-        "title": "Wednesday 3/17: Finish CodeHS",
+        "title": "Wednesday 4/7: Finish CodeHS",
         "description": """ Will be in google meets during class time if you need help. Finish codehs unit from Tuesday""",
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -113,7 +113,7 @@ def main():
     assignment(service, computer_science_a_ap, wednesday_cs, "Computer Science A")
 
     friday_cs = {
-        "title": "Friday 3/19: Finish CodeHS",
+        "title": "Friday 4/9: Finish CodeHS",
         "description": """ Will be in google meets during class time if you need help. Finish codehs unit from Thursday""",
         "materials": [{"link": {"url": "http://codehs.com"}}],
         "workType": "ASSIGNMENT",
@@ -135,7 +135,7 @@ def main():
     # Create drafts for Pre-Cal Class
 
     monday_cal = {
-        "title": "Monday 3/15: Notes + Exit Ticket",
+        "title": "Monday 4/5: Notes + Exit Ticket",
         "description": "Watch the video below, follow notes and do the exit ticket for your attendance for today or show up to google meets during class period",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -150,7 +150,7 @@ def main():
     }
 
     tuesday_cal = {
-        "title": "Tuesday 3/16: Assignment",
+        "title": "Tuesday 4/6: Assignment",
         "description": "Will be up by Tuesday 8 am. I will be in google meets for one on one questions",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -165,7 +165,7 @@ def main():
     }
 
     wednesday_cal = {
-        "title": "Wednesday 3/17: Notes + Exit Ticket",
+        "title": "Wednesday 4/7: Notes + Exit Ticket",
         "description": "Watch the video below, follow notes and do the exit ticket for your attendance for today or show up to google meets during class period",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -180,7 +180,7 @@ def main():
     }
 
     thursday_cal = {
-        "title": "Thursday 3/18: Assignment",
+        "title": "Thursday 4/8: Assignment",
         "description": "Will be up by Thursday 8am. I will be in google meets for one on one questions",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -195,7 +195,7 @@ def main():
     }
 
     friday_cal = {
-        "title": "Friday 3/19: Review/Quiz over the week",
+        "title": "Friday 4/9: Review/Quiz over the week",
         "description": "This day is to review / quiz assignment over this weeks material. I will be in google meets for one on one questions",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
