@@ -56,16 +56,16 @@ def main():
 
     # Call the Classroom API
 
-    date = "2021-4-5T13:00:23Z"
+    date = "2021-4-19T12:00:23Z"
 
     # Create drafts for CS Classes
 
     tuesday_cs = {
-        "title": "Tuesday 4/6: CodeHS",
+        "title": "Tuesday 4/20: CodeHS",
         "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [
             {"link": {"url": "https://codehs.com"}},
-            {"link": {"url": "https://forms.gle/A6EpbfPZuvS2rKqW8"}},
+            {"link": {"url": "https://forms.gle/Ee6F7wWYv8mKq6Mu7"}},
         ],
         "scheduledTime": date,
         "state": "DRAFT",
@@ -80,11 +80,11 @@ def main():
     material(service, computer_science_a_ap, tuesday_cs, "Computer Science A")
 
     thursday_cs = {
-        "title": "Thursday 4/8: CodeHS",
+        "title": "Thursday 4/22: CodeHS",
         "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
         "materials": [
             {"link": {"url": "https://codehs.com"}},
-            {"link": {"url": "https://forms.gle/w5J36z3b9YbbQV9P8"}},
+            {"link": {"url": "https://forms.gle/HLV9cu4ZQ7pn7qMs7"}},
         ],
         "scheduledTime": date,
         "state": "DRAFT",
