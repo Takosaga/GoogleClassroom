@@ -56,17 +56,15 @@ def main():
 
     # Call the Classroom API
 
-    date = "2021-4-19T12:00:23Z"
+    date = "2021-4-26T12:00:23Z"
 
     # Create drafts for CS Classes
 
     tuesday_cs = {
-        "title": "Tuesday 4/20: CodeHS",
-        "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
+        "title": "Tuesday 4/27: AP Create Task / Review",
+        "description": """Using this day to work on Create Task/ to review over AP Test.""",
         "materials": [
-            {"link": {"url": "https://codehs.com"}},
-            {"link": {"url": "https://forms.gle/Ee6F7wWYv8mKq6Mu7"}},
-        ],
+            {"link": {"url": "https://myap.collegeboard.org/login"}}],
         "scheduledTime": date,
         "state": "DRAFT",
     }
@@ -80,12 +78,10 @@ def main():
     material(service, computer_science_a_ap, tuesday_cs, "Computer Science A")
 
     thursday_cs = {
-        "title": "Thursday 4/22: CodeHS",
-        "description": """Watch the videos on CodeHS and make sure to fill out the form for attendance . Will be in google meets during class time if you need help.""",
+        "title": "Thursday 4/29: AP Create Task / Review",
+        "description": """Using this day to work on Create Task/ to review over AP Test.""",
         "materials": [
-            {"link": {"url": "https://codehs.com"}},
-            {"link": {"url": "https://forms.gle/HLV9cu4ZQ7pn7qMs7"}},
-        ],
+            {"link": {"url": "https://myap.collegeboard.org/login"}}],
         "scheduledTime": date,
         "state": "DRAFT",
     }
