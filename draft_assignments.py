@@ -53,13 +53,19 @@ def main():
 
     # Setting times
 
-    date = "2021-4-26T12:00:23Z"
+    date = "2021-5-10T12:00:23Z"
 
     # This is the Sunday after for CST
     due = {
         "year": 2021,
         "month": 5,
-        "day": 2
+        "day": 16
+    }
+
+    dueAP = {
+        "year": 2021,
+        "month": 5,
+        "day": 20
     }
 
     time = {
@@ -73,12 +79,18 @@ def main():
     # Create drafts for CS Classes
 
     monday_cs = {
-        "title": "Monday 4/26: AP Create Task / Review",
+        "title": "Monday 5/10: AP Create Task Day 11/14",
         "description": "Using this day to work on Create Task/ to review over AP Test.",
-        "materials": [{"link": {"url": "https://myap.collegeboard.org/login"}}],
+        "materials": [
+            {"link": {"url": "https://myap.collegeboard.org/login"}},
+            {"link": {"url": "https://www.youtube.com/watch?v=h51o7IqY4vQ"}},
+            {"link": {"url": "https://drive.google.com/file/d/1CpQl4TYr6PYKuUM89IcGojcXb0yQGCQT/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://drive.google.com/file/d/1tnEJwVStW5ld-m5DOE4CkcwQhEld1SN9/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://classroom.google.com/c/MTI2NjQ1NjAyMDYw/m/MzI1ODMzMDk4ODc2/details"}},
+        ],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
-        "dueDate": due,
+        "dueDate": dueAP,
         "dueTime": time,
         "maxPoints": 100,
         "state": "DRAFT",
@@ -90,15 +102,46 @@ def main():
         monday_cs,
         "Computer Science Principles",
     )
-    assignment(service, computer_science_a_ap, monday_cs, "Computer Science A")
+    #assignment(service, computer_science_a_ap, monday_cs, "Computer Science A")
 
-    wednesday_cs = {
-        "title": "Wednesday 4/28: AP Create Task / Review",
-        "description": """ Using this day to work on Create Task/ to review over AP Test.""",
-        "materials": [{"link": {"url": "https://myap.collegeboard.org/login"}}],
+    tuesday_cs = {
+        "title": "Tuesday 5/11: AP Create Task Day 12/14",
+        "description": "Using this day to work on Create Task/ to review over AP Test.",
+        "materials": [
+            {"link": {"url": "https://myap.collegeboard.org/login"}},
+            {"link": {"url": "https://www.youtube.com/watch?v=h51o7IqY4vQ"}},
+            {"link": {"url": "https://drive.google.com/file/d/1CpQl4TYr6PYKuUM89IcGojcXb0yQGCQT/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://drive.google.com/file/d/1tnEJwVStW5ld-m5DOE4CkcwQhEld1SN9/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://classroom.google.com/c/MTI2NjQ1NjAyMDYw/m/MzI1ODMzMDk4ODc2/details"}},
+        ],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
-        "dueDate": due,
+        "dueDate": dueAP,
+        "dueTime": time,
+        "maxPoints": 100,
+        "state": "DRAFT",
+    }
+
+    assignment(
+        service,
+        computer_science_principles_ap,
+        tuesday_cs,
+        "Computer Science Principles",
+    )
+
+    wednesday_cs = {
+        "title": "Wednesday 5/12: AP Create Task Day 13/14",
+        "description": """ Using this day to work on Create Task/ to review over AP Test.""",
+        "materials": [
+            {"link": {"url": "https://myap.collegeboard.org/login"}},
+            {"link": {"url": "https://www.youtube.com/watch?v=h51o7IqY4vQ"}},
+            {"link": {"url": "https://drive.google.com/file/d/1CpQl4TYr6PYKuUM89IcGojcXb0yQGCQT/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://drive.google.com/file/d/1tnEJwVStW5ld-m5DOE4CkcwQhEld1SN9/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://classroom.google.com/c/MTI2NjQ1NjAyMDYw/m/MzI1ODMzMDk4ODc2/details"}},
+        ],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": date,
+        "dueDate": dueAP,
         "dueTime": time,
         "maxPoints": 100,
         "state": "DRAFT",
@@ -110,15 +153,46 @@ def main():
         wednesday_cs,
         "Computer Science Principles",
     )
-    assignment(service, computer_science_a_ap, wednesday_cs, "Computer Science A")
+    #assignment(service, computer_science_a_ap, wednesday_cs, "Computer Science A")
 
-    friday_cs = {
-        "title": "Friday 4/30: AP Create Task / Review",
+    thursday_cs = {
+        "title": "Thursday 5/13: AP Practice EXAM",
         "description": """ Using this day to work on Create Task/ to review over AP Test.""",
-        "materials": [{"link": {"url": "https://myap.collegeboard.org/login"}}],
+        "materials": [
+            {"link": {"url": "https://myap.collegeboard.org/login"}},
+            {"link": {"url": "https://www.youtube.com/watch?v=h51o7IqY4vQ"}},
+            {"link": {"url": "https://drive.google.com/file/d/1CpQl4TYr6PYKuUM89IcGojcXb0yQGCQT/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://drive.google.com/file/d/1tnEJwVStW5ld-m5DOE4CkcwQhEld1SN9/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://classroom.google.com/c/MTI2NjQ1NjAyMDYw/m/MzI1ODMzMDk4ODc2/details"}},
+        ],
         "workType": "ASSIGNMENT",
         "scheduledTime": date,
-        "dueDate": due,
+        "dueDate": dueAP,
+        "dueTime": time,
+        "maxPoints": 100,
+        "state": "DRAFT",
+    }
+
+    assignment(
+        service,
+        computer_science_principles_ap,
+        thursday_cs,
+        "Computer Science Principles",
+    )
+
+    friday_cs = {
+        "title": "Friday 5/14: AP AP Practice EXAM",
+        "description": """ Using this day to work on Create Task/ to review over AP Test.""",
+        "materials": [
+            {"link": {"url": "https://myap.collegeboard.org/login"}},
+            {"link": {"url": "https://www.youtube.com/watch?v=h51o7IqY4vQ"}},
+            {"link": {"url": "https://drive.google.com/file/d/1CpQl4TYr6PYKuUM89IcGojcXb0yQGCQT/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://drive.google.com/file/d/1tnEJwVStW5ld-m5DOE4CkcwQhEld1SN9/view?usp=drive_web&authuser=1"}},
+            {"link": {"url": "https://classroom.google.com/c/MTI2NjQ1NjAyMDYw/m/MzI1ODMzMDk4ODc2/details"}},
+        ],
+        "workType": "ASSIGNMENT",
+        "scheduledTime": date,
+        "dueDate": dueAP,
         "dueTime": time,
         "maxPoints": 100,
         "state": "DRAFT",
@@ -130,12 +204,12 @@ def main():
         friday_cs,
         "Computer Science Principles",
     )
-    assignment(service, computer_science_a_ap, friday_cs, "Computer Science A")
+    #assignment(service, computer_science_a_ap, friday_cs, "Computer Science A")
 
     # Create drafts for Pre-Cal Class
 
     monday_cal = {
-        "title": "Monday 4/26: Notes + Exit Ticket",
+        "title": "Monday 5/10: Factoring Notes + Exit Ticket",
         "description": "Watch the video below, follow notes and do the exit ticket for your attendance for today or show up to google meets during class period",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
@@ -150,8 +224,8 @@ def main():
     }
 
     tuesday_cal = {
-        "title": "Tuesday 4/27: Assignment",
-        "description": "Will be up by Tuesday 8 am. I will be in google meets for one on one questions",
+        "title": "Tuesday 5/11: Factoring Assignment",
+        "description": "Will be up by Tuesday 8 am. I'm also AP testing",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
             {"link": {"url": "https://api.socrative.com/rc/PLV8sA"}},
@@ -165,8 +239,8 @@ def main():
     }
 
     wednesday_cal = {
-        "title": "Wednesday 4/28: Notes + Exit Ticket",
-        "description": "Watch the video below, follow notes and do the exit ticket for your attendance for today or show up to google meets during class period",
+        "title": "Wednesday 5/12: I'm AP testing",
+        "description": "Work on what you need",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
             {"link": {"url": "https://api.socrative.com/rc/tkaACc"}},
@@ -180,8 +254,8 @@ def main():
     }
 
     thursday_cal = {
-        "title": "Thursday 4/29: Assignment",
-        "description": "Will be up by Thursday 8am. I will be in google meets for one on one questions",
+        "title": "Thursday 5/13: Campus Is STAAR testing",
+        "description": "Work on what you need",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
             {"link": {"url": "https://api.socrative.com/rc/ZSyhHx"}},
@@ -195,8 +269,8 @@ def main():
     }
 
     friday_cal = {
-        "title": "Friday 4/30: Review/Quiz over the week",
-        "description": "This day is to review / quiz assignment over this weeks material. I will be in google meets for one on one questions",
+        "title": "Friday 5/14: Last week before finals, ask if you need me to reopen stuff",
+        "description": "Work on what you need",
         "materials": [
             {"link": {"url": "https://www.desmos.com/scientific"}},
             {"link": {"url": "https://api.socrative.com/rc/EYHpzL"}},
